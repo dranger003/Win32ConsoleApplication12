@@ -1,0 +1,45 @@
+HKCR
+{
+    NoRemove Interface
+    {
+        ForceRemove {B04669C0-2489-45AE-BA30-382D6BFC5899}
+        {
+            ProxyStubClsid32 = s '{00020424-0000-0000-C000-000000000046}'
+            TypeLib = s '{8C3BD6F7-B825-4E9B-BB06-BD5D7B6BEFD9}'
+            val Version = s '1.0'
+        }
+    }
+
+    NoRemove CLSID
+    {
+        ForceRemove {3AF37B79-354A-4345-9D55-87E17C2A77AE}
+        {
+            LocalServer = s '%MODULE%'
+            val AppID = s '{3AF37B79-354A-4345-9D55-87E17C2A77AE}'
+        }
+    }
+
+    NoRemove TypeLib
+    {
+        ForceRemove {8C3BD6F7-B825-4E9B-BB06-BD5D7B6BEFD9}
+        {
+            1.0
+            {
+                0
+                {
+                    win32 = s 'C:\Users\dranger003\Documents\Visual Studio 2010\Projects\Win32ConsoleApplication12\Win32ConsoleApplication12\Debug\Win32ConsoleApplication12.tlb'
+                }
+                FLAGS = s '0'
+                HELPDIR = s 'C:\Users\dranger003\Documents\Visual Studio 2010\Projects\Win32ConsoleApplication12\Win32ConsoleApplication12\Debug'
+            }
+        }
+    }
+
+    NoRemove AppID
+    {
+        ForceRemove {3AF37B79-354A-4345-9D55-87E17C2A77AE}
+        {
+            val RunAs = s 'Interactive User'
+        }
+    }
+}

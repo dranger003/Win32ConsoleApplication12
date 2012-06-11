@@ -1,0 +1,28 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(B04669C0-2489-45AE-BA30-382D6BFC5899),
+    oleautomation,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IClass1 : IUnknown {
+	HRESULT Ping();
+};
+
+[
+	uuid(8C3BD6F7-B825-4E9B-BB06-BD5D7B6BEFD9),
+	version(1.0),
+]
+library Win32ConsoleApplication12Lib
+{
+	importlib("stdole2.tlb");
+    [
+	    uuid(3AF37B79-354A-4345-9D55-87E17C2A77AE),
+    ]
+    coclass Class1 {
+	    [default] interface IClass1;
+    };
+}
